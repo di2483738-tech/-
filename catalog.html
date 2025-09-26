@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoPartsPro | Каталог запчастей</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .part-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <i data-feather="package" class="text-amber-600"></i>
+                    <a href="index.html" class="text-xl font-bold text-amber-600">AutoPartsPro</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition">Главная</a>
+                    <a href="catalog.html" class="text-amber-600 font-medium">Каталог</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-600 transition">О нас</a>
+                    <a href="contacts.html" class="text-gray-700 hover:text-blue-600 transition">Контакты</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="relative">
+                        <i data-feather="shopping-cart" class="text-gray-700 hover:text-amber-600"></i>
+                        <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+                    </button>
+                    <button class="md:hidden">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Catalog Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Каталог запчастей</h2>
+            
+            <!-- Filters -->
+            <div class="bg-gray-100 p-4 rounded-lg mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="relative">
+                        <select class="w-full p-3 border border-gray-300 rounded-md appearance-none bg-white">
+                            <option>Выберите марку</option>
+                            <option>Toyota</option>
+                            <option>BMW</option>
+                            <option>Mercedes</option>
+                            <option>Audi</option>
+                            <option>Volkswagen</option>
+                            <option>Honda</option>
+                            <option>Hyundai</option>
+                            <option>Kia</option>
+                            <option>Ford</option>
+                            <option>Chevrolet</option>
+                        </select>
+                        <i data-feather="chevron-down" class="absolute right-3 top-3 text-gray-500"></i>
+                    </div>
+                    <div class="relative">
+                        <select class="w-full p-3 border border-gray-300 rounded-md appearance-none bg-white">
+                            <option>Выберите модель</option>
+                            <option>Camry</option>
+                            <option>Corolla</option>
+                            <option>X5</option>
+                            <option>3 Series</option>
+                            <option>E-Class</option>
+                            <option>C-Class</option>
+                            <option>A6</option>
+                            <option>A4</option>
+                            <option>Golf</option>
+                            <option>Passat</option>
+                            <option>Civic</option>
+                            <option>Accord</option>
+                            <option>Solaris</option>
+                            <option>Tucson</option>
+                        </select>
+                        <i data-feather="chevron-down" class="absolute right-3 top-3 text-gray-500"></i>
+                    </div>
+                    <div class="relative">
+                        <select class="w-full p-3 border border-gray-300 rounded-md appearance-none bg-white">
+                            <option>Категория запчастей</option>
+                            <option>Двигатель</option>
+                            <option>Трансмиссия</option>
+                            <option>Подвеска</option>
+                            <option>Электрика</option>
+                            <option>Кузовные детали</option>
+                        </select>
+                        <i data-feather="chevron-down" class="absolute right-3 top-3 text-gray-500"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Parts Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Part Card 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden part-card transition duration-300">
+                    <div class="relative">
+                        <img src="http://static.photos/automotive/320x240/2" alt="Тормозные колодки" class="w-full h-48 object-cover">
+                        <span class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded">Новинка</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Тормозные колодки Brembo</h3>
+                        <p class="text-gray-600 text-sm mb-3">Для Toyota Camry 2015-2020</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-amber-600">4 990 ₽</span>
+                            <button class="bg-amber-600 text-white p-2 rounded-full hover:bg-amber-700 transition">
+                                <i data-feather="shopping-cart" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Part Card 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden part-card transition duration-300">
+                    <div class="relative">
+                        <img src="http://static.photos/automotive/320x240/3" alt="Масляный фильтр" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Масляный фильтр Mann</h3>
+                        <p class="text-gray-600 text-sm mb-3">Для BMW X5 2010-2015</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-amber-600">1 290 ₽</span>
+                            <button class="bg-amber-600 text-white p-2 rounded-full hover:bg-amber-700 transition">
+                                <i data-feather="shopping-cart" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Part Card 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden part-card transition duration-300">
+                    <div class="relative">
+                        <img src="http://static.photos/automotive/320x240/4" alt="Свечи зажигания" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Свечи зажигания NGK</h3>
+                        <p class="text-gray-600 text-sm mb-3">Для Mercedes E-Class 2012-2018</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-amber-600">3 450  ₽</span>
+                            <button class="bg-amber-600 text-white p-2 rounded-full hover:bg-amber-700 transition">
+                                <i data-feather="shopping-cart" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Part Card 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden part-card transition duration-300">
+                    <div class="relative">
+                        <img src="http://static.photos/automotive/320x240/5" alt="Амортизаторы" class="w-full h-48 object-cover">
+                        <span class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded">Новинка</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Амортизаторы Bilstein</h3>
+                        <p class="text-gray-600 text-sm mb-3">Для Audi A6 2011-2018</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-amber-600">12 800 ₽</span>
+                            <button class="bg-amber-600 text-white p-2 rounded-full hover:bg-amber-700 transition">
+                                <i data-feather="shopping-cart" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
